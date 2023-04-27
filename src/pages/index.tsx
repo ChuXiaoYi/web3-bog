@@ -28,20 +28,20 @@ export default function Home(props) {
         {
           /* map over the posts array and render a button with the post title */
           posts.map((post, index) => (
-            <Link href={`/post/${post[2]}`} key={index}>
-              <a>
-                <div className={linkStyle}>
-                  <p className={postTitle}>{post[1]}</p>
-                  <div className={arrowContainer}>
-                    <img
-                      src="/right-arrow.svg"
-                      alt="Right arrow"
-                      className={smallArrow}
-                    />
-                  </div>
+            (<Link href={`/post/${post[2]}`} key={index}>
+
+              <div className={linkStyle}>
+                <p className={postTitle}>{post[1]}</p>
+                <div className={arrowContainer}>
+                  <img
+                    src="/right-arrow.svg"
+                    alt="Right arrow"
+                    className={smallArrow}
+                  />
                 </div>
-              </a>
-            </Link>
+              </div>
+
+            </Link>)
           ))
         }
       </div>

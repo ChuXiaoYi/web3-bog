@@ -48,17 +48,17 @@ function MyApp({ Component, pageProps }) {
       <nav className={nav}>
         <div className={header}>
           <Link href="/">
-            <a>
-              <img src="/logo.svg" alt="React Logo" style={{ width: "50px" }} />
-            </a>
+
+            <img src="/logo.svg" alt="React Logo" style={{ width: "50px" }} />
+
           </Link>
           <Link href="/">
-            <a>
-              <div className={titleContainer}>
-                <h2 className={title}>Full Stack</h2>
-                <p className={description}>WEB3</p>
-              </div>
-            </a>
+
+            <div className={titleContainer}>
+              <h2 className={title}>Full Stack</h2>
+              <p className={description}>WEB3</p>
+            </div>
+
           </Link>
           {!account && (
             <div className={buttonContainer}>
@@ -70,15 +70,15 @@ function MyApp({ Component, pageProps }) {
           {account && <p className={accountInfo}>{account}</p>}
         </div>
         <div className={linkContainer}>
-          <Link href="/">
-            <a className={link}>Home</a>
+          <Link href="/" className={link}>
+            Home
           </Link>
           {
             /* if the signed in user is the contract owner, we */
             /* show the nav link to create a new post */
             account === ownerAddress && (
-              <Link href="/create-post">
-                <a className={link}>Create Post</a>
+              <Link href="/create-post" className={link}>
+                Create Post
               </Link>
             )
           }
